@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body {
+  font-size: 15px;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "first second"
+      "third fourth";
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .grid-section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "first second third"
+      "first fourth third";
+    gap: 2.5rem;
+  }
+
+  .grid-section article {
+    align-self: center;
+  }
+
+  .grid-section article:nth-child(1) {
+    grid-area: first;
+  }
+
+  .grid-section article:nth-child(2) {
+    grid-area: second;
+  }
+
+  .grid-section article:nth-child(3) {
+    grid-area: third;
+  }
+
+  .grid-section article:nth-child(4) {
+    grid-area: fourth;
+  }
+}
