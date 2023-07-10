@@ -28,7 +28,6 @@ body {
       "first second third"
       "first fourth third";
     gap: 2.5rem;
-    grid-auto-flow: column;
   }
 
   .grid-section article {
